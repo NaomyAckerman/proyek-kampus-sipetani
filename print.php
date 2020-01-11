@@ -44,6 +44,16 @@ if (isset($_POST['printdetail'])) {
 </head>
 <body>
 
+<!-- Konten -->
+
+<section>	
+	<content>
+		<div class="container">    
+			<?php foreach ($printpemesanan as $data): ?>
+			<div class="container">
+			<div class="content">
+			<form method="POST" action="">
+
 <!-- Header -->
 
 <section>
@@ -61,15 +71,6 @@ if (isset($_POST['printdetail'])) {
 
 <!-- Akhir Header -->
 
-<!-- Konten -->
-
-<section>	
-	<content>
-		<div class="container">    
-			<?php foreach ($printpemesanan as $data): ?>
-			<div class="container">
-			<div class="content">
-			<form method="POST" action="">
 			<table>
 				<tr>
 					<td><label for="nama_pemesan">Nama Pemesan</label></td>
