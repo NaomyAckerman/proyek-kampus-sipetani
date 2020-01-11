@@ -287,4 +287,15 @@ function uploadfoto() {
 	return $namafoto;
 }
 
+
+//fungsi cari
+function cari($keyword) {
+	global $conn;
+	$query = "SELECT * FROM users
+	where
+	nama = '$keyword'
+	";
+	return tampil($query);
+}
+
  ?>
