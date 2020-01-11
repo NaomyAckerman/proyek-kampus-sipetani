@@ -1,0 +1,113 @@
+/*Media Query android*/
+
+@media (max-width: 767.98px) {
+
+	header .container img{
+		height: 70px;
+		width: 70px;
+	}
+	header .container h1{
+		position: relative;
+		top: -5px !important; 
+		font-size: 30px;
+	}
+	header .btn{
+		width: 90px;
+		font-size: 11px;
+		color: white;
+	}
+	header .btn i{
+		display: none;
+	}
+	header .dropdown-menu{
+		margin-top: 30px !important;
+	}
+	header .dropdown img{
+		width: 30px !important;
+		height: 30px !important;
+	}
+}
+
+/*Windows*/
+
+body{
+	font-family: sans-serif;
+	background-image: url(foto/vlcsnap-2018-06-12-13h07m02s231.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+/*Header*/
+
+.transparan{
+	background-color: rgba(48, 133, 119,1);
+}
+
+.transparan2{
+	color: white;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 50px;
+	background-color: rgba(0, 0, 0,0.9);
+}
+
+header .btn{
+	background-color: rgba(136,228,182,0.6);
+	transition: 0.3s;
+	color: white;
+}
+
+header .btn:hover{
+	color: black;
+}
+
+header .dropdown-menu{
+	margin-top: 35px;
+}
+
+header .dropdown img{
+	width: 40px;
+	height: 40px;
+}
+header .dropdown span{
+	color: white;
+}
+
+/* Header Akhir */
+
+/*Content*/
+content .card{
+	background-color: rgba(136,228,182,0.6);
+	padding: 25px;
+}
+
+content .card p{
+	margin-top: 25px;
+	font-size: 16px;
+}
+
+content .card h4{
+	font-size: 18px;
+}
+
+.card-150{
+	max-height: 347px;
+	box-sizing: border-box;
+}
+
+/* Content Akhir */
+
+/*Footer*/
+
+footer{
+	background-color: black;
+	margin-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+footer i{
+	margin-left: 5px;
+}
