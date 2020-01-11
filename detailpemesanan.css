@@ -8,8 +8,8 @@
 	}
 	header .container h1{
 		position: relative;
-		top: -5px !important; 
 		font-size: 30px;
+		text-shadow: 1px 2px 1px black;
 	}
 	header .btn{
 		width: 90px;
@@ -28,6 +28,7 @@
 	}
 }
 
+
 /*Windows*/
 
 body{
@@ -37,7 +38,6 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 }
-
 
 /*Header*/
 
@@ -57,6 +57,10 @@ header .btn{
 	background-color: rgba(136,228,182,0.6);
 	transition: 0.3s;
 	color: white;
+}
+
+header h1{
+	text-shadow: 1px 2px 1px black;
 }
 
 header .btn:hover{

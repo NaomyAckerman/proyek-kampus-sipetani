@@ -1,3 +1,75 @@
+/*Media Query android*/
+
+@media (max-width: 767.98px) {
+
+	header .container img{
+		height: 70px;
+		width: 70px;
+	}
+	header .container h1{
+		position: relative;
+		font-size: 30px;
+		text-shadow: 1px 2px 1px black;
+	}
+	header .btn{
+		width: 90px;
+		font-size: 11px;
+		color: white;
+	}
+	header .btn i{
+		display: none;
+	}
+	header .dropdown-menu{
+		margin-top: 30px !important;
+	}
+	header .dropdown img{
+		width: 30px !important;
+		height: 30px !important;
+	}
+}
+
+
+/*Windows*/
+
+body{
+	font-family: sans-serif;
+}
+
+/*Header*/
+
+.transparan{
+	background-color: rgba(48, 133, 119,1);
+	margin-bottom: 50px;
+}
+
+header .btn{
+	background-color: rgba(136,228,182,0.6);
+	transition: 0.3s;
+	color: white;
+}
+
+header h1{
+	text-shadow: 1px 2px 1px black;
+}
+
+header .btn:hover{
+	color: black;
+}
+
+header .dropdown-menu{
+	margin-top: 35px;
+}
+
+header .dropdown img{
+	width: 40px;
+	height: 40px;
+}
+header .dropdown span{
+	color: white;
+}
+
+/* Header Akhir */
+
 label{
 	font-size: 25px;
 	font-family: times new roman;
@@ -6,4 +78,17 @@ label{
 input{
 	border: 0px;
 	font-size: 25px;
+}
+
+/*Footer*/
+
+footer{
+	background-color: black;
+	margin-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+footer i{
+	margin-left: 5px;
 }

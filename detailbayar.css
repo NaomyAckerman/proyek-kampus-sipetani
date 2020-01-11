@@ -8,15 +8,15 @@
 	}
 	header .container h1{
 		position: relative;
-		top: -5px !important; 
 		font-size: 30px;
+		text-shadow: 1px 2px 1px black;
 	}
-	header a .btn{
+	header .btn{
 		width: 90px;
 		font-size: 11px;
 		color: white;
 	}
-	header a .btn i{
+	header .btn i{
 		display: none;
 	}
 	header .dropdown-menu{
@@ -28,6 +28,7 @@
 	}
 }
 
+
 /*Windows*/
 
 body{
@@ -37,7 +38,6 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 }
-
 
 /*Header*/
 
@@ -53,13 +53,17 @@ body{
 	background-color: rgba(0, 0, 0,0.9);
 }
 
-header a .btn{
+header .btn{
 	background-color: rgba(136,228,182,0.6);
 	transition: 0.3s;
 	color: white;
 }
 
-header a .btn:hover{
+header h1{
+	text-shadow: 1px 2px 1px black;
+}
+
+header .btn:hover{
 	color: black;
 }
 
@@ -76,6 +80,7 @@ header .dropdown span{
 }
 
 /* Header Akhir */
+
 
 /* Content */
 
@@ -115,6 +120,10 @@ header .dropdown span{
 
 .content form button, .content form a{
 	background-color: rgba(44, 102, 78, 0.6);
+}
+
+.content form .invalid-tooltip, .content form .valid-tooltip{
+	font-size: 10px;
 }
 
 /* Content Akhir*/
