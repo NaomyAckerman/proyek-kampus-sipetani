@@ -1,7 +1,6 @@
 <?php 
 session_start();
 require 'fungsi.php';
-require 'PHPMailer-5.2.13/PHPMailerAutoload.php';
 
 if (isset($_SESSION['login'])) {
 	header("location:homepembeli.php");
@@ -23,9 +22,11 @@ if (isset($_POST['reset'])) {
 			$passbaru = substr(base_convert(sha1(uniqid(mt_rand())),16,36),0,6);
 			// Update password baru
 			mysqli_query($conn,"UPDATE users SET password = $passbaru WHERE email = $email");
-
+			require 'PHPMailer-5.2.13/PHPMailerAutoload.php';
 			$mail = new PHPMailer;
+
 			//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
 			$mail->isSMTP();                                      // Set mailer to use SMTP
 			$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -38,30 +39,24 @@ if (isset($_POST['reset'])) {
 			$mail->FromName = 'Admin Developer';
 			$mail->addAddress($email, 'User');     // Add a recipient
 			// $mail->addAddress('ellen@example.com');               // Name is optional
-			$mail->addReplyTo('rmatuszahro@gmail.comm', 'Admin');
-			$mail->addCC('rmatuszahro@gmail.com');
-			$mail->addBCC('rmatuszahro@gmail.com');
+			$mail->addReplyTo('rmatuszahro$gmail.com', 'Admin');
+			$mail->addCC('cc@example.com');
+			$mail->addBCC('bcc@example.com');
 
 			$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 			$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 			$mail->isHTML(true);                                  // Set email format to HTML
 
 			$mail->Subject = 'AdminDeveloper';
-			$mail->Body    = '<center><p>Password Berhasi Diganti</p><br>
-								<h1 class="alert alert-danger">'.$passbaru.'</h1><br>
-								<a href="http://localhost/penjualantikettamanbotaniv2/homepembeli.php">
-								Silahkan Cek Password Baru Anda</a>
-							  </center>';
+			$mail->Body    = '<center><p>Password Berhasi Diganti</p><br><a href="www.google.com"><h1 class="alert alert-danger">password</h1></a></center>';
 			$mail->AltBody = 'bisa This is the body in plain text for non-HTML mail clients';
 
 			if(!$mail->send()) {
 			    echo 'Message could not be sent.';
 			    echo 'Mailer Error: ' . $mail->ErrorInfo;
 			} else {
-			    echo '<h1 class="alert alert-success text-center">Password berhasil dikirim silahkan cek diemail anda</h1><br>
-			    	<center>
-			    	 <a href="http://www.gmail.com">cek email</a>
-			    	</center>';
+			    echo '<h1 class="alert alert-success">Password berhasil dikirim silahkan cek diemail anda</h1><br>
+			    	 <a target="_blank" href="http://www.gmail.com">cek email</a>';
 			}
 		}else{
 			echo "<script>
