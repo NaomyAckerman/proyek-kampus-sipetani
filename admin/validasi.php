@@ -147,6 +147,7 @@ if (isset($_GET['id'])) {
                   <tr>
                     <th>NO</th>
                     <th>ID PEMESANAN</th>
+                    <th>NAMA PEMESANAN</th>
                     <th>TOTAL PEMBAYARAN</th>
                     <th>BUKTI PEMBAYARAN</th>
                     <th>KONFIRMASI PEMBAYARAN</th>
@@ -158,6 +159,7 @@ if (isset($_GET['id'])) {
                   <tr>
                     <td><?= $n; ?></td>
                     <td><?= $data["id_pemesanan"]; ?></td>
+                    <td><?= $data["nama_pemesan"]; ?></td>
                     <td><?= $data["total_pembayaran"]; ?></td>
                     <td>
                       <?php if ($data['bukti_pembayaran'] == NULL ): ?>
