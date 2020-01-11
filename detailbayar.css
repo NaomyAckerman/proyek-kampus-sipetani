@@ -1,0 +1,135 @@
+/*Media Query android*/
+
+@media (max-width: 767.98px) {
+
+	header .container img{
+		height: 70px;
+		width: 70px;
+	}
+	header .container h1{
+		position: relative;
+		top: -5px !important; 
+		font-size: 30px;
+	}
+	header a .btn{
+		width: 90px;
+		font-size: 11px;
+		color: white;
+	}
+	header a .btn i{
+		display: none;
+	}
+	header .dropdown-menu{
+		margin-top: 30px !important;
+	}
+	header .dropdown img{
+		width: 30px !important;
+		height: 30px !important;
+	}
+}
+
+/*Windows*/
+
+body{
+	font-family: sans-serif;
+	background-image: url(foto/vlcsnap-2018-06-12-13h07m02s231.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+/*Header*/
+
+.transparan{
+	background-color: rgba(48, 133, 119,1);
+}
+
+.transparan2{
+	color: white;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 50px;
+	background-color: rgba(0, 0, 0,0.9);
+}
+
+header a .btn{
+	background-color: rgba(136,228,182,0.6);
+	transition: 0.3s;
+	color: white;
+}
+
+header a .btn:hover{
+	color: black;
+}
+
+header .dropdown-menu{
+	margin-top: 35px;
+}
+
+header .dropdown img{
+	width: 40px;
+	height: 40px;
+}
+header .dropdown span{
+	color: white;
+}
+
+/* Header Akhir */
+
+/* Content */
+
+.content .card{
+	background-color: rgba(136,228,182,0.6);
+}
+
+.content .card-body form{
+	margin: 40px auto 0px;
+}
+
+.content table th{
+	font-size: 18px;
+}
+
+.content form input{
+	background: rgba(255,255,225,0.6);
+	width: 225px;
+	margin: 10px 0;
+	border: 2px solid rgba(44, 102, 78, 0.6);
+	color: black;
+	font-size: 17px;
+	transition: 0.4s;
+	text-align: center;
+}
+
+.content form label{
+	font-weight: bold;
+}
+
+.content form input:hover, .content form input:focus{
+	background-color: white;
+	border-color: 0.25 rgb(0, 0, 0) solid;
+	width: 90%;
+	height: 50px;
+}
+
+.content form button, .content form a{
+	background-color: rgba(44, 102, 78, 0.6);
+}
+
+/* Content Akhir*/
+
+/*Footer*/
+
+footer{
+	background-color: black;
+	margin-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+footer i{
+	margin-left: 5px;
+}
+
+/* Footer akhir */
