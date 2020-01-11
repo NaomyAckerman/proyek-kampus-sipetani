@@ -56,7 +56,7 @@ if (isset($_POST['printdetail'])) {
 
 <!-- Header -->
 
-<section>
+<section> 
 	<header class="transparan">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-dark mt-auto mb-2">
