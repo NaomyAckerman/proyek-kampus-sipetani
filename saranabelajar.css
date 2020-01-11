@@ -8,8 +8,8 @@
 	}
 	header .container h1{
 		position: relative;
-		top: -5px !important; 
 		font-size: 30px;
+		text-shadow: 1px 2px 1px black;
 	}
 	header .btn{
 		width: 90px;
@@ -28,6 +28,7 @@
 	}
 }
 
+
 /*Windows*/
 
 body{
@@ -37,7 +38,6 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 }
-
 
 /*Header*/
 
@@ -59,6 +59,10 @@ header .btn{
 	color: white;
 }
 
+header h1{
+	text-shadow: 1px 2px 1px black;
+}
+
 header .btn:hover{
 	color: black;
 }
@@ -76,6 +80,8 @@ header .dropdown span{
 }
 
 /* Header Akhir */
+
+
 
 /* Content */
 

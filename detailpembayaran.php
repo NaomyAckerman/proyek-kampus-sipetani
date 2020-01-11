@@ -201,21 +201,45 @@ if (isset($_POST["pesan"])) {
         	<div class="col-md-4">
 				<div class="card">
                       <div class="card-body py-0">
-					  <form method="POST" action="">
+					  <form method="POST" action="" class="needs-validation" novalidate>
 					  			<input type="hidden" name="tgl" value="<?= date('Y-m-d',strtotime($_POST['tgl'])); ?>">
 					  			<input type="hidden" name="total" value="<?= $total; ?>">
 					  			<input type="hidden" name="jumlah" value="<?= $jumlah; ?>">
                                 <div class="form-group">
                                     <label class="text-dark" for="nama">Nama</label>
-                                    <input required="" type="text" class="form-control rounded-pill" id="nama" name="nama">
+									<input required="" type="text" class="form-control rounded-pill" id="nama" name="nama" required>
+									
+									<!-- Required Bootstrap -->
+										<div class="invalid-tooltip w-50 text-center mx-auto mt-1" style="position: relative;">
+											Harap Masukkan Nama Terlebih Dahulu!
+										</div>
+										<div class="valid-tooltip w-50 text-center mx-auto mt-1" style="position: relative;">
+											Nama Sudah Dimasukkan.
+										</div>
                                 </div>
                                 <div class="form-group">
                                    <label class="text-dark" for="alamat">Alamat</label>
-                                    <input required="" type="text" class="form-control rounded-pill" id="alamat" name="alamat">
+									<input required="" type="text" class="form-control rounded-pill" id="alamat" name="alamat" required>
+									
+									<!-- Required Bootstrap -->
+									<div class="invalid-tooltip w-50 text-center mx-auto mt-1" style="position: relative;">
+											Harap Masukkan Alamat Terlebih Dahulu!
+										</div>
+										<div class="valid-tooltip w-50 text-center mx-auto mt-1" style="position: relative;">
+											Alamat Sudah Dimasukkan.
+										</div>
                                 </div>
 								<div class="form-group">
                                     <label class="text-dark" for="no_telp">No. Telp</label>
-                                    <input required="" type="text" class="form-control rounded-pill" id="no_telp" name="no_telp">
+									<input required="" type="text" class="form-control rounded-pill" id="no_telp" name="no_telp" required>
+									
+									<!-- Required Bootstrap -->
+									<div class="invalid-tooltip w-50 text-center mx-auto mt-1" style="position: relative;">
+											Harap Masukkan No. Telp Terlebih Dahulu!
+										</div>
+										<div class="valid-tooltip w-50 text-center mx-auto mt-1" style="position: relative;">
+											No. Telp Sudah Dimasukkan.
+										</div>
                                 </div>
                                 <div class="form-group">
                                     <hr>
