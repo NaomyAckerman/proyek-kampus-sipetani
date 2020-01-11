@@ -14,7 +14,7 @@ if (isset($idpemesanan)) {
 
 $print = "
 	<script>
-		windows.print();
+		window.print();
 	</script>
 ";
 
@@ -50,7 +50,6 @@ if (isset($_POST['printdetail'])) {
 	<content>
 		<div class="container">    
 			<?php foreach ($printpemesanan as $data): ?>
-			<div class="container">
 			<header class="transparan">
 				<div class="container">
 					<nav class="navbar navbar-expand-lg navbar-dark mt-auto mb-2">
@@ -61,6 +60,7 @@ if (isset($_POST['printdetail'])) {
 					</nav>
 				</div>
 			</header>
+			<div class="container">
 			<div class="content">
 			<form method="POST" action="">
 			<table>
