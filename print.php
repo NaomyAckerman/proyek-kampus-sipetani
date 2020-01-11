@@ -28,9 +28,19 @@ if (isset($_POST['printdetail'])) {
 <html>
 <head>
 	<title>Print</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='foto/2Logo-Botani-1.png' rel='shortcut icon'>
+	<!-- My CSS -->
 	<link rel="stylesheet" type="text/css" href="cetak.css">
-	<link rel="stylesheet" type="text/css" href="assets/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/all.css">
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  	<script src="js/jquery-3.4.1.min.js"></script>
+  	<script src="js/popper.min.js"></script>
+  	<script src="js/bootstrap.js"></script>
+  	<script src="js/all.js"></script>
 </head>
 <body>
 	<?php foreach ($printpemesanan as $data): ?>
