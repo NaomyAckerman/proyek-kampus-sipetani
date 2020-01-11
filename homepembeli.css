@@ -1,0 +1,264 @@
+/*Media Query android*/
+
+@media (max-width: 767.98px) {
+
+	header .container img{
+		height: 70px;
+		width: 70px;
+	}
+	header .container h1{
+		position: relative;
+		font-size: 30px;
+		text-shadow: 1px 2px 1px black;
+	}
+	header .btn{
+		width: 90px;
+		font-size: 11px;
+		color: white;
+	}
+	header .btn i{
+		display: none;
+	}
+	header .dropdown-menu{
+		margin-top: 30px !important;
+	}
+	header .dropdown img{
+		width: 30px !important;
+		height: 30px !important;
+	}
+}
+
+
+/*Windows*/
+
+body{
+	font-family: sans-serif;
+	background-image: url(foto/vlcsnap-2018-06-12-13h07m02s231.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/*Header*/
+
+.transparan{
+	background-color: rgba(48, 133, 119,1);
+}
+
+.transparan2{
+	color: white;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 50px;
+	background-color: rgba(0, 0, 0,0.9);
+}
+
+header .btn{
+	background-color: rgba(136,228,182,0.6);
+	transition: 0.3s;
+	color: white;
+}
+
+header h1{
+	text-shadow: 1px 2px 1px black;
+}
+
+header .btn:hover{
+	color: black;
+}
+
+header .dropdown-menu{
+	margin-top: 35px;
+}
+
+header .dropdown img{
+	width: 40px;
+	height: 40px;
+}
+header .dropdown span{
+	color: white;
+}
+
+/* Header Akhir */
+
+
+
+
+
+/*Content*/
+
+content .pesan{
+	color: white;
+	background-color: rgba(136,228,182,0.6);
+	border-radius: 5px;
+	box-shadow: 1px 2px 15px gray;
+}
+
+content .pesan form label{
+	font-weight: bold;
+}
+
+content .sarana{
+	color: white;
+	background-color: rgba(136,228,182,0.6);
+	border-radius: 5px;
+	padding-bottom: 20px;
+	box-shadow: 1px 2px 15px gray;
+	text-shadow: 0.5px 1px 2px black;
+}
+
+content .pesan form button{
+	border: none;
+	background-color: rgba(44, 102, 78, 0.6);
+	text-shadow: 0.5px 1px 2px black;
+}
+
+content .info{
+	background-color: rgba(136,228,182,0.6); 
+}
+
+content h2{
+	cursor: pointer;
+	color: white;
+	text-transform: uppercase;
+	transition-duration: 0.5s;
+	font-weight: bolder;
+	letter-spacing: 5px;
+	text-shadow: 1px 2px 1px black;
+}
+
+content h4{
+	text-shadow: 0.5px 0.5px 0.5px gray;
+}
+
+content a:hover{
+	text-decoration: none;
+}
+
+content h2:hover{
+	color: blue;
+	font-weight: bolder;
+	text-shadow: 1px 2px 1px lightblue;
+}
+
+content h2::after{
+	content: "";
+	display: block;
+	border-bottom: 2px solid blue;
+	width: 0%;
+	transition: 0.8s;
+}
+
+content h2:hover::after{
+	content: "";
+	display: block;
+	margin: auto;
+	border-bottom: 2px solid blue;
+	width: 75%;
+}
+
+content form{
+	margin-top: 35px;
+	text-transform: capitalize;
+}
+
+content .info .card-body form .harga{
+	background-color:silver;
+}
+
+content .info .card-body form .jumlah{
+	background-color: silver;
+}
+
+content .info .card-body form .jamkerja{
+	background-color: silver;
+}
+
+content .info span{
+	text-align: center;
+	font-size: 18px;
+	width: 80px;
+	text-shadow: 0.5px 1px 2px black;
+}
+
+content .info .jumlah span{
+	text-align: center;
+	font-size: 18px;
+	width: 175px;
+	text-shadow: 0.5px 1px 2px black;
+}
+
+content .info .jamkerja span{
+	text-align: center;
+	font-size: 15px;
+	width: 175px;
+	text-shadow: 0.5px 1px 2px black;
+}
+
+content .info .jamkerja .libur{
+	text-align: center;
+	font-size: 20px;
+	width: 175px;
+	text-shadow: 0.5px 1px 2px black;
+}
+
+content .pesan input{
+	background: rgba(255,255,225,0.6);
+	width: 225px;
+	margin: 10px auto 0;
+	border: 2px solid rgba(44, 102, 78, 0.6);
+	color: black;
+	font-size: 17px;
+	transition: 0.4s;
+	text-align: center;
+
+}
+
+content .pesan input:hover, content .pesan input:focus{
+	background-color: white;
+	border-color: 0.25 rgb(0, 0, 0) solid;
+	width: 90%;
+	height: 50px;
+}
+
+content .sarana .tombol1, content .sarana .tombol2, content .sarana .tombol3{
+	border: none;
+	width: 75%;
+	transition: 0.7s;
+	color: white;
+}
+
+content .sarana .tombol1:hover, content .sarana .tombol2:hover, content .sarana .tombol3:hover{
+	width: 100%;
+	color: white;
+}
+
+content .card form a{
+	background-color: rgb(57, 126, 99);
+	text-shadow: 0.5px 1px 2px black;
+}
+
+.content1 .btn, .content2 .btn, .content3 .btn{
+	background-color: rgb(57, 126, 99);
+} 
+
+.content1, .content2, .content3{
+	text-shadow: 0.5px 0.5px 1px gray;
+}
+
+/*content akhir*/
+
+
+
+/*Footer*/
+
+footer{
+	background-color: black;
+	margin-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+footer i{
+	margin-left: 5px;
+}
