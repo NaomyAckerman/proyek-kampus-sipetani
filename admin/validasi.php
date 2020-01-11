@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
   header("location:../homepembeli.php");
 }
 //variabel untuk menampilkan data
-$validasi = tampil("SELECT * FROM pemesanan");
+$validasi = tampil("SELECT * FROM pemesanan where bukti_pembayaran = '1'");
 
 // update status pembayaran
 if (isset($_GET['id'])) {
@@ -151,6 +151,7 @@ if (isset($_GET['id'])) {
                     <th>TOTAL PEMBAYARAN</th>
                     <th>BUKTI PEMBAYARAN</th>
                     <th>KONFIRMASI PEMBAYARAN</th>
+                    <th>STATUS PEMBAYARAN</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -172,6 +173,11 @@ if (isset($_GET['id'])) {
                         <a href="?id=<?= $data["id_pemesanan"]; ?>&status=1" class="btn btn-sm btn-primary rounded-circle" onclick ="return confirm('Anda Yakin Ingin Mengkonfirmasi?');"><i class="fas fa-check"></i></a>
                         <a href="?id=<?= $data["id_pemesanan"]; ?>&status=0" class="btn btn-sm btn-danger rounded-circle"><i class="fas fa-times"></i></a>
                     </td>
+                    <td><?php if ($data["status_pembayaran"] == 1): ?>
+                        <label class="btn btn-sm btn-success rounded-pill">Lunas</label>
+                      <?php else: ?>
+                      <label class="btn btn-sm btn-danger rounded-pill">Lunas</label>
+                      <?php endif ?></td>
                   </tr>
                   <?php $n++; ?>
                   <?php endforeach; ?>
