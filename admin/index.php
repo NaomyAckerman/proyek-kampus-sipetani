@@ -10,8 +10,15 @@ if (!isset($_SESSION['login'])) {
 }
 //untuk menghubungkan dengan file fungsi
 require '../fungsi.php';
+
 //variabel untuk menampilkan data
 $user = tampil("SELECT * FROM users");
+
+// tombol cari ditekan
+if (isset($_POST["cari"])) {
+  $user = cari($_POST['keyword']);
+}
+
  ?>
 
 <!DOCTYPE html>
@@ -39,7 +46,6 @@ $user = tampil("SELECT * FROM users");
 </head>
 
 <body id="page-top">
-
   <nav class="navbar navbar-expand navbar-dark static-top">
 
     <a class="navbar-brand mr-1" href="index.php">Taman Botani</a>
@@ -49,11 +55,11 @@ $user = tampil("SELECT * FROM users");
     </button>
 
     <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <form action="" method="post" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Cari..." aria-label="Search" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" placeholder="Cari..." autocomplete="off" aria-label="Search" aria-describedby="basic-addon2" name="keyword">
         <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
+          <button class="btn btn-primary" type="button" name="cari">
             <i class="fas fa-search"></i>
           </button>
         </div>
