@@ -14,7 +14,7 @@ if (isset($idpemesanan)) {
 
 $print = "
 	<script>
-		window.print();
+		windows.print();
 	</script>
 ";
 
@@ -51,26 +51,18 @@ if (isset($_POST['printdetail'])) {
 		<div class="container">    
 			<?php foreach ($printpemesanan as $data): ?>
 			<div class="container">
+			<header class="transparan">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-dark mt-auto mb-2">
+							<img src="foto/2Logo-Botani-1.png" height="90" width="90">
+						<div class="nav-item">
+							<h1 class="text-white text-uppercase font-weight-bolder ml-4 shadow-sm">Bukti Pemesanan Tiket Taman Botani</h1>
+						</div>
+					</nav>
+				</div>
+			</header>
 			<div class="content">
 			<form method="POST" action="">
-
-<!-- Header -->
-
-<section> 
-	<header class="transparan">
-		<div class="container">
-			<nav class="navbar navbar-expand-lg navbar-dark mt-auto mb-2">
-			  		<img src="foto/2Logo-Botani-1.png" height="90" width="90">
-			  	<div class="nav-item">
-				  	<h1 class="text-white text-uppercase font-weight-bolder ml-4 shadow-sm">Bukti Pemesanan Tiket Taman Botani</h1>
-			  	</div>
-			</nav>
-		</div>
-	</header>
-</section>
-
-<!-- Akhir Header -->
-
 			<table>
 				<tr>
 					<td><label for="nama_pemesan">Nama Pemesan</label></td>
