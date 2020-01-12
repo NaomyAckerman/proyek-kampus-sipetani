@@ -278,32 +278,33 @@ if(isset($_POST['unggah'])){
 <!-- Footer -->
 
 <section>
+
 <footer>
     <div class="container text-center text-white">
         <div class="row">
             <div class="col-md-4">
                 <div class="mt-3">
                   Kontak Kami  
-                  <i class="fab fa-whatsapp"></i>
-                  <i class="fas fa-phone-square-alt"></i>
-                  <i class="fas fa-envelope-square"></i>
+                  <a href="https://wa.me/6285100707600"><i class="fab fa-whatsapp"></i></a>
+                  <a href="mailto:info@tamanbotanisukorambi.com"><i class="fas fa-envelope-square"></i></a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="mt-3">
                     <h4>Taman Botani</h4>
                 </div>
- 	        </div>
+          </div>
             <div class="col-md-4">
                 <div class="mt-3">
                   Ikuti Kami
-                  <i class="fab fa-facebook-f"></i>
-                  <i class="fab fa-instagram"></i>
+                  <a href="http://www.facebook.com/Taman-Botani-Sukorambi-TBS-270378679664307/?epa=SEARCH_BOX"><i class="fab fa-facebook-f"></i></a>
+                  <a href="http://instagram.com/taman.botani.sukorambi?igshid=u5xscy48nuw4"><i class="fab fa-instagram"></i></a>
                 </div>
-            </div>			
+            </div>      
         </div>
     </div>
 </footer>
+
 </section> 
 
 <!-- Akhir Footer -->
