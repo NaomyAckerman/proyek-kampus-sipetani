@@ -157,7 +157,7 @@ if (isset($_POST['reset'])) {
 	</div>
 	</header>
 	<?php if (isset($_GET['message'])): ?>
-		<h3 class="mx-auto w-75 text-center alert alert-success alert-di">Password berhasil direset, silahkan cek diemail anda, kemudian langsung lakukan login 
+		<h3 class="mx-auto w-75 text-center alert alert-success alert-di">Password berhasil direset, silahkan cek diemail anda, kemudian langsung lakukan LOGIN 
 		<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
 		<a class="btn btn-primary d-block mx-auto mt-2 w-25" href="http://www.gmail.com">cek email</a>
 		</h3>
