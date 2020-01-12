@@ -53,8 +53,13 @@ function pemesanan($data){
  	$nama_pemesan = htmlspecialchars($data["nama"]);
  	$alamat = htmlspecialchars($data["alamat"]);
  	$no_telp = htmlspecialchars($data["no_telp"]);
+
+ 	//kode pembayaran
+ 	$kode = substr(uniqid(rand(), true),3,3);
+ 	//total pembayaran + kode pembayaran
+ 	$kodepembayaran = $total + $kode;
  	//query insert data
- 	$query = "INSERT INTO pemesanan values ('','$nama_pemesan','$alamat','$tanggal','$jumlah','$total','$no_telp','','','','$id')";
+ 	$query = "INSERT INTO pemesanan values ('','$nama_pemesan','$alamat','$tanggal','$jumlah','$kodepembayaran','$no_telp','','','','$id')";
  	mysqli_query($conn,$query);
  	return mysqli_affected_rows($conn);
  }
@@ -354,12 +359,11 @@ function carikonfirmasi($keywordkonfirmasi) {
 	global $conn;
 	$keywordkonfirmasi = $keywordkonfirmasi['keywordkonfirmasi'];
 	$query = "SELECT * FROM pemesanan
-				where
+				WHERE
 				bukti_pembayaran != 0 AND
-				id_pemesanan LIKE '%$keywordkonfirmasi%' OR
+				(id_pemesanan LIKE '%$keywordkonfirmasi%' OR
 				nama_pemesan LIKE '%$keywordkonfirmasi%' OR 
-				total_pembayaran LIKE '%$keywordkonfirmasi%' OR
-				status_pembayaran LIKE '%$keywordkonfirmasi%'
+				total_pembayaran LIKE '%$keywordkonfirmasi%')
 			";
 	return tampil($query);
 }

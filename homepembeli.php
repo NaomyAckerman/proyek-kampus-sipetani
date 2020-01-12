@@ -242,7 +242,7 @@ if(isset($_POST['unggah'])){
 
 	<!-- Jika iya akan menampilkan tombol bukti byr, cetak dan detail -->
 	<?php if ($cek > 0) :?>
-	<div class = "content ml-5">
+	<div class = "content ml-5" id="unggah">
 	    <div class= "content1 text-white ml-5">
 	        <label for="buktipembayaran">Bukti Pembayaran</label>
 	        <a data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-primary rounded-pill" href="">Unggah</a>

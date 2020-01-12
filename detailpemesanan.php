@@ -18,12 +18,13 @@ $pemesanan = tampil("SELECT * FROM pemesanan WHERE
 					order by id_pemesanan desc limit 1");
 
 // cek apakah memiliki pemesanan baru
-if ($pemesanan == null) {
+if ($pemesanan == NULL) {
 	echo "<script>
 		  alert('Anda tidak memiliki pemesanan');
 		  document.location.href='homepembeli.php';
 		  </script>";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -119,7 +120,7 @@ if ($pemesanan == null) {
 	        	
 	        	<!-- Detail Pemesanan -->
 	        	<div class="col-md-4 offset-md-4">
-					<div class="card" style="background-color: rgba(136,228,182,0.6);">
+					<div class="card">
 	                      <div class="card-body">
 								<table cellpadding="3">
 									<?php foreach ($pemesanan as $data) :?>
@@ -174,7 +175,7 @@ if ($pemesanan == null) {
 	        	
 	        	<!-- Info -->
 			    <div class="col-md-4">
-					<div class="card" style="background-color: rgba(136,228,182,0.6);">
+					<div class="card">
 				        <div class="card-body text-left ">
 				            <form method="POST" action="fungsi.php">
 				                <div class="form-group p-3 rounded text-center" style="background-color:silver;">
@@ -187,7 +188,7 @@ if ($pemesanan == null) {
 				                </div>
 				                <div class="form-group p-3 rounded text-center" style="background-color: silver;">
 				                    <h5>Anda Dapat Mencetak Bukti Pemesanan, Setelah Mengunggah Bukti Pembayaran.</h5>
-				                	<a href="homepembeli.php" class="btn btn-primary my-3">Silahkan Unggah Bukti Pembayaran</a>
+				                	<a href="homepembeli.php#unggah" class="btn btn-primary my-3">Silahkan Unggah Bukti Pembayaran</a>
 				                </div>
 				            </form>
 				       	</div>

@@ -33,7 +33,7 @@ if (isset($_POST["pesan"])) {
 		echo "
 	    <script>
 	      alert('Anda Masih Memiliki tanggungan Silahkan Unggah Bukti Pembayaran!!!');
-	      document.location.href='homepembeli.php';
+	      document.location.href='homepembeli.php#unggah';
 	    </script>
 	    ";exit();
 	}
