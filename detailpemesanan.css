@@ -101,6 +101,11 @@ a{
 	border-radius: 10px;
 }
 
+.content .card{
+	box-shadow: 1px 2px 15px gray;
+	background-color: rgba(136,228,182,0.6);
+}
+
 form .btn{
 	background-color: #308577;
 	text-shadow: 0.5px 1px 2px black;

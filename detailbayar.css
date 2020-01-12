@@ -86,6 +86,7 @@ header .dropdown span{
 
 .content .card{
 	background-color: rgba(136,228,182,0.6);
+	box-shadow: 1px 2px 15px gray;
 }
 
 .content .card-body form{

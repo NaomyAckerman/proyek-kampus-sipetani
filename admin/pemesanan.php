@@ -18,7 +18,7 @@ $pemesanan = tampil("SELECT * FROM pemesanan order by id_pemesanan desc");
 // tombol caripemesanan ditekan
 if (isset($_POST['caripemesanan'])) {
   $pemesanan = caripemesanan($_POST);
-
+}
 ?>
 
 <!DOCTYPE html>
@@ -119,7 +119,7 @@ if (isset($_POST['caripemesanan'])) {
             <!--jika cekcetak lebih besar dri 0 maka ada pesanan yang statusnya cetak 0 byr 1-->
           <?php if ($cekcetak > 0): ?>
           <span class="badge badge-danger" style="position: absolute; margin: 0px -15px 0px 15; font-size: 12px;"><?= $cekcetak; ?></span>
-       <?php endif ?>
+         <?php endif ?>
        </span>
        </a>
       </li>
@@ -173,7 +173,13 @@ if (isset($_POST['caripemesanan'])) {
                     <td><?= $data["jumlah_tiket"]; ?></td>
                     <td><?= $data["no_telp"]; ?></td>
                     <td><?= $data["total_pembayaran"]; ?></td>
-                    <td><?= $data["bukti_pembayaran"]; ?></td>
+                    <td>
+                      <?php if (!$data["bukti_pembayaran"]): ?>
+                      <span class="btn btn-sm btn-danger rounded-pill">Belum Unggah</span>
+                      <?php else: ?>
+                      <img class="rounded" height="60" width="80" src="fotobuktipembayaran/<?= $data["bukti_pembayaran"]; ?>">    
+                      <?php endif ?>
+                    </td>
                     <td>
                       <?php if ($data["status_pembayaran"] == 1): ?>
                         <label class="btn btn-sm btn-success rounded-pill">Lunas</label>
@@ -258,5 +264,4 @@ if (isset($_POST['caripemesanan'])) {
   <script src="js/demo/datatables-demo.js"></script>
 
 </body>
-
-</htm>
+</html>
