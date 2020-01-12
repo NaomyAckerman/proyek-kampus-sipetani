@@ -23,7 +23,7 @@ if (isset($_GET['id'])) {
         where id_pemesanan = '$idpemesanan'
         ";
   $result = mysqli_query($conn,$query);
-  header('location:pemesanan.php');
+  header('location:validasi.php');
 }
 
 ?>
