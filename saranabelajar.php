@@ -102,7 +102,7 @@ require 'fungsi.php';
       </div>
       <div class="col-md-6 mt-5">
           <div class="card">
-            <h4>ANEKA KOLEKSI HEWAN</h4>
+            <h4>ANEKA KOLEKSI HEWAN DILINDUNGI</h4>
             <img height="150" width="250" src="foto/botani/rusa.jpg">
             <p>Ada tiga jenis hewan dilindungi di Taman Botani Sukorambi, yaitu kijang, rusa, dan burung merak. Ada 4 kijang, 12 rusa dan 4 burug merak. Lokasi hewan tersebut berada di taman yang cukup luas, sehingga mudah dilihat oleh para pengunjung.</p>
           </div>
@@ -122,6 +122,13 @@ require 'fungsi.php';
             <h4>PEMBENIHAN IKAN KOI DAN LOBSTER</h4>
             <img height="150" width="250" src="foto/botani/DSC_0136b.jpg">
             <p>Taman Botani Sukorambi tidak hanya menyenangkan untuk keluarga. Kini di taman ini juga menjadi lokasi pembenihan dan pembesaran ikan koi dan lobster air tawar. Ada sekitar 9 kolam untuk pembudidayaan.</p>
+          </div>
+      </div>
+      <div class="col-md-6 mt-5">
+          <div class="card card-155">
+            <h4>BUNNY AND FRIENDS VILLAGE</h4>
+            <img height="150" width="250" src="foto/botani/DSC_0017.jpg">
+            <p>Ada ratusan koleksi kelinci di Taman Botani Sukorambi yang dipelihara dan dirawat di tempat khusus. Yakni di dekat kantor pengelola. Hewan lucu itu berada dalam satu kandang dan bisa dipelajari perilakunya oleh masyarakat luas.</p>
           </div>
       </div>
 

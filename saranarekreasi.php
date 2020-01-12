@@ -95,16 +95,16 @@ require 'fungsi.php';
     <div class="row">
       <div class="col-md-6 mt-5">
           <div class="card">
-            <h4>FLYING FOX JUNGLE</h4>
+            <h4>FLYING FOX</h4>
             <img height="150" width="250" src="foto/botani/31.jpg">
-            <p>Di Taman Botani Sukorambi terdapat atau wahana yang bisa Anda rasakan untuk memacu adrenalin. Flying Fox Jungle namanya. Ini adalah Flying Fox menantang dengan panjang sekitar 160 meter dan berangkat dari ketinggian 40.</p>
+            <p>Di Taman Botani Sukorambi terdapat wahana yang bisa Anda rasakan untuk memacu adrenalin. Yaitu Flying Fox Jungle dan Flying Fox Tombro. Dengan dilengkapi berbagai alat pengaman, wahana ini layak dicoba bagi Anda yang menyukai petualangan ekstrim.</p>
           </div>
       </div>
       <div class="col-md-6 mt-5">
           <div class="card">
             <h4>KOLAM RENANG</h4>
             <img height="150" width="250" src="foto/botani/21.jpg">
-            <p>Fasilitas kolam renang anak di Taman Botani Sukorambi ini memiliki kedalaman 60 cm dengan panjang 19 meter dan lebar 5 meter. Kolam renang itu berdekatan dengan kolam renang dewasa. Sehingga orang tua bisa dengan mudah memantau putra-putrinya.</p>
+            <p>Fasilitas kolam renang di Taman Botani Sukorambi ini memiliki 5 kolam renang, antara lain : Kolam Renang Dewasa, Kolam Renang Remaja, Kolam Renang Anak, Kolam Renang Pelangi 1 dan Kolam Renang Pelangi 2.</p>
           </div>
       </div>
     </div>
@@ -121,7 +121,35 @@ require 'fungsi.php';
           <div class="card card-150">
             <h4>PONDOK BACA</h4>
             <img height="150" width="250" src="foto/botani/DSC_1528.jpg">
-            <p>Pondok baca ini menyediakan berbagai koleksi bacaan. Mulai dari buku tentang agama, ilmu pengetahuan, tanaman dan buku lainnya. Suasana yang nyaman dan sunyi membuat masyarakat yang membaca bisa fokus. Bahkan, ada dua ruangan untuk memanjakan.</p>
+            <p>Pondok baca ini menyediakan berbagai koleksi bacaan. Mulai dari buku tentang agama, ilmu pengetahuan, tanaman dan buku lainnya. Suasana yang nyaman dan sunyi membuat masyarakat yang membaca bisa fokus. Bahkan, ada dua ruangan untuk memanjakan, dilantai dasar dan atas.</p>
+          </div>
+      </div>
+      <div class="col-md-6 mt-5">
+          <div class="card card-150">
+            <h4>RUMAH POHON</h4>
+            <img height="150" width="250" src="foto/botani/Rumah-Pohon4.jpg">
+            <p>Rumah Pohon menjadi salah satu wahana di Taman Botani Sukorambi yang pantang dilewatkan. Dengan tinggi sekitar 5 meter dari permukaan tanah, pengunjung bisa melihat panorama Taman Botani Sukorambi dari ketinggian.</p>
+          </div>
+      </div>
+        <div class="col-md-6 mt-5">
+          <div class="card card-150">
+            <h4>MUSLIMAH PRIVATE AREA</h4>
+            <img height="150" width="250" src="foto/botani/MPA-1536x1031.jpg">
+            <p>Pengunjung bebas meminjam MPA. Setiap jam dikenakan Rp 100.000.Di dalam MPA terdapat kolam renang dengan kedalaman bervariasi, musala,kamar mandi dengan fasilitas air panas, dan tempat meeting.Pengunjung yang hendak meminjam MPA harus menandatangani sejumlah pernyataan kepada pengelola.</p>
+          </div>
+      </div>
+      <div class="col-md-6 mt-5">
+          <div class="card card-150">
+            <h4>PERMAINAN AIR</h4>
+            <img height="150" width="250" src="foto/botani/35.jpg">
+            <p>Di Wahana permainan air. Di bagian bawah, terdapat danau buatan dengan sebuah pulau mungil di tengahnya.Bagi yang ingin merasakan sensasi mendayung perahu, pengunjung bisa mencoba wahana ini. Di danau buatan ini, terdapat dua buah perahu yang bisa disewa oleh pengunjung.</p>
+          </div>
+      </div>
+      <div class="col-md-6 mt-5">
+          <div class="card card-150">
+            <h4>BERKUDA</h4>
+            <img height="150" width="250" src="foto/botani/kuda-lagi.jpg">
+            <p>Pengunjung bisa berkeliling Taman Botani Sukorambi dengan menunggang kuda yang sudah disediakan pengelola, dengan didampingi oleh pawang kuda. Untuk sekali menunggang kuda, pengunjung hanya dikenakan tarif Rp 10 ribu.</p>
           </div>
       </div>
 
