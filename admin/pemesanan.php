@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
   header("location:../homepembeli.php");
 }
 //variabel untuk menampilkan data
-$pemesanan = tampil("SELECT * FROM pemesanan");
+$pemesanan = tampil("SELECT * FROM pemesanan order by id_pemesanan desc");
 ?>
 
 <!DOCTYPE html>

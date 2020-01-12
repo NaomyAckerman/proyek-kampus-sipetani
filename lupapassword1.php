@@ -12,20 +12,18 @@ if (isset($_SESSION['login'])) {
 if (isset($_POST['reset'])) {
 	$email = $_POST['email'];
 	$pin = $_POST['pin'];
-	$query = "SELECT * FROM users WHERE email = '$email'";
-	$result = mysqli_query($conn,$query);
+	$result = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email'");
 	$cek = mysqli_num_rows($result);
-	// cek apakah ada email didata base
 	if ($cek == 1) {
 		$data = mysqli_fetch_array($result);
-		// cek apakah pin sama dengan yg di database
 		if ($pin == $data['pin']) {
-			$passbaru = substr(base_convert(sha1(uniqid(mt_rand())),16,36),0,6);
-			// Update password baru
-			mysqli_query($conn,"UPDATE users SET password = $passbaru WHERE email = $email");
-
+			
+			$pasbaru = substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, 6);
+			
+			mysqli_query($conn,"UPDATE users SET password = '$pasbaru' WHERE email = '$email'");
 			$mail = new PHPMailer;
 			//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
 			$mail->isSMTP();                                      // Set mailer to use SMTP
 			$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -35,10 +33,10 @@ if (isset($_POST['reset'])) {
 			$mail->Port = 465;                                    // TCP port to connect to
 
 			// $mail->From = 'AdminDeveloper@gmail.com';
-			$mail->FromName = 'Admin Developer';
+			$mail->FromName = 'SIPetani-Official';
 			$mail->addAddress($email, 'User');     // Add a recipient
 			// $mail->addAddress('ellen@example.com');               // Name is optional
-			$mail->addReplyTo('rmatuszahro@gmail.comm', 'Admin');
+			$mail->addReplyTo('rmatuszahro@gmail.com', 'Admin');
 			$mail->addCC('rmatuszahro@gmail.com');
 			$mail->addBCC('rmatuszahro@gmail.com');
 
@@ -46,11 +44,12 @@ if (isset($_POST['reset'])) {
 			$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 			$mail->isHTML(true);                                  // Set email format to HTML
 
-			$mail->Subject = 'AdminDeveloper';
-			$mail->Body    = '<center><p>Password Berhasi Diganti</p><br>
-								<h1 class="alert alert-danger">'.$passbaru.'</h1><br>
-								<a href="http://localhost/penjualantikettamanbotaniv2/homepembeli.php">
-								Silahkan Cek Password Baru Anda</a>
+			$mail->Subject = 'SIPetani-Official Admin';
+			$mail->Body    = '<center><h1>Password Berhasi Direset</h1><br>
+								<h1 style="color : blue;">'.$pasbaru.'</h1><br>
+								<a href="http://localhost/SIPetani/homepembeli.php">
+								<h6>Pesan Tiket SIPetani<h6>
+								</a>
 							  </center>';
 			$mail->AltBody = 'bisa This is the body in plain text for non-HTML mail clients';
 
@@ -58,23 +57,21 @@ if (isset($_POST['reset'])) {
 			    echo 'Message could not be sent.';
 			    echo 'Mailer Error: ' . $mail->ErrorInfo;
 			} else {
-			    echo '<h1 class="alert alert-success text-center">Password berhasil dikirim silahkan cek diemail anda</h1><br>
-			    	<center>
-			    	 <a href="http://www.gmail.com">cek email</a>
-			    	</center>';
+			    header('location:lupapassword1.php?message=berhasil');
 			}
 		}else{
-			echo "<script>
-				  	alert('PIN yang anda masukkan salah!!!');
-				  	document.location.href='lupapassword1.php';
-				  </script>";
-				  exit();	
+			echo "
+			<script>
+			alert('PIN anda salah!');
+			document.location.href = 'lupapassword1.php';
+			</script>";
 		}
 	}else{
-		echo "<script>
-			  	alert('Email anda tidak terdaftar');
-			  	document.location.href='lupapassword1.php';
-			  </script>";
+		echo "
+			<script>
+			alert('Email tidak terdaftar!');
+			document.location.href = 'lupapassword1.php';
+			</script>";
 	}
 }
 ?>
@@ -159,6 +156,13 @@ if (isset($_POST['reset'])) {
 	<div class="transparan2">
 	</div>
 	</header>
+	<?php if (isset($_GET['message'])): ?>
+		<h3 class="mx-auto w-75 text-center alert alert-success alert-di">Password berhasil direset silahkan cek diemail anda
+		<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+		<a class="btn btn-primary d-block mx-auto mt-2 w-25" href="http://www.gmail.com">cek email</a>
+		</h3>
+		<br>
+	<?php endif ?>
 </section>
 
 <!-- Akhir Header -->
