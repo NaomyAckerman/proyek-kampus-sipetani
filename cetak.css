@@ -14,7 +14,7 @@
 	header .btn{
 		width: 90px;
 		font-size: 11px;
-		color: white;
+		color: black;
 	}
 	header .btn i{
 		display: none;
@@ -45,7 +45,7 @@ body{
 header .btn{
 	background-color: rgba(136,228,182,0.6);
 	transition: 0.3s;
-	color: white;
+	color: black;
 }
 
 header h1{
@@ -65,7 +65,7 @@ header .dropdown img{
 	height: 40px;
 }
 header .dropdown span{
-	color: white;
+	color: black;
 }
 
 /* Header Akhir */
@@ -80,15 +80,3 @@ input{
 	font-size: 25px;
 }
 
-/*Footer*/
-
-footer{
-	background-color: black;
-	margin-top: 50px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-footer i{
-	margin-left: 5px;
-}

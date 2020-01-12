@@ -32,7 +32,7 @@ if (isset($_POST['printdetail'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='foto/2Logo-Botani-1.png' rel='shortcut icon'>
 	<!-- My CSS -->
-	<link rel="stylesheet" type="text/css" href="cetak.css">
+	<link rel="stylesheet" type="text/css" href="cetak.css" media="print">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/all.css">
@@ -50,14 +50,14 @@ if (isset($_POST['printdetail'])) {
 	<content>
 		<div class="container">    
 			<?php foreach ($printpemesanan as $data): ?>
-			<header class="transparan">
+			<header class="transparan" style="background-color: rgba(48, 133, 119,1)">
 				<div class="container">
-					<nav class="navbar navbar-expand-lg navbar-dark mt-auto mb-2">
-							<img src="foto/2Logo-Botani-1.png" height="90" width="90">
-						<div class="nav-item">
-							<h1 class="text-white text-uppercase font-weight-bolder ml-4 shadow-sm">Bukti Pemesanan Tiket Taman Botani</h1>
-						</div>
-					</nav>
+					<!-- <nav class="navbar navbar-expand-lg navbar-dark mt-auto mb-2"> -->
+							<!-- <img src="foto/2Logo-Botani-1.png" height="90" width="90">
+						<div class="nav-item"> -->
+							<h1 class="Text-white text-uppercase ml-4 shadow-sm">Bukti Pemesanan Tiket Taman Botani</h1>
+						<!-- </div>
+					</nav> -->
 				</div>
 			</header>
 			<div class="container">
