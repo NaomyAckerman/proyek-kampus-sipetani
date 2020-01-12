@@ -27,8 +27,8 @@ if (isset($_POST['reset'])) {
 			$mail->isSMTP();                                      // Set mailer to use SMTP
 			$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;                               // Enable SMTP authentication
-			$mail->Username = 'rmatuszahro@gmail.com';                 // SMTP username
-			$mail->Password = 'RAmatus99';                           // SMTP password
+			$mail->Username = 'goldeneagle0319@gmail.com';                 // SMTP username
+			$mail->Password = 'golden0319';                           // SMTP password
 			$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 			$mail->Port = 465;                                    // TCP port to connect to
 
@@ -36,9 +36,9 @@ if (isset($_POST['reset'])) {
 			$mail->FromName = 'SIPetani-Official';
 			$mail->addAddress($email, 'User');     // Add a recipient
 			// $mail->addAddress('ellen@example.com');               // Name is optional
-			$mail->addReplyTo('rmatuszahro@gmail.com', 'Admin');
-			$mail->addCC('rmatuszahro@gmail.com');
-			$mail->addBCC('rmatuszahro@gmail.com');
+			$mail->addReplyTo('goldeneagle0319@gmail.com', 'Admin');
+			$mail->addCC('goldeneagle0319@gmail.com');
+			$mail->addBCC('goldeneagle0319@gmail.com');
 
 			$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 			$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
@@ -157,7 +157,7 @@ if (isset($_POST['reset'])) {
 	</div>
 	</header>
 	<?php if (isset($_GET['message'])): ?>
-		<h3 class="mx-auto w-75 text-center alert alert-success alert-di">Password berhasil direset, silahkan cek diemail anda, kemudian lansung lakukan login 
+		<h3 class="mx-auto w-75 text-center alert alert-success alert-di">Password berhasil direset, silahkan cek diemail anda, kemudian langsung lakukan LOGIN 
 		<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
 		<a class="btn btn-primary d-block mx-auto mt-2 w-25" href="http://www.gmail.com">cek email</a>
 		</h3>
