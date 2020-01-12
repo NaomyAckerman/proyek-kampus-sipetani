@@ -155,6 +155,7 @@ if (isset($_POST['reset'])) {
 		</div>
 	<div class="transparan2">
 	</div>
+	</header>
 	<?php if (isset($_GET['message'])): ?>
 		<h3 class="mx-auto w-50 text-center alert alert-success alert-di">Password berhasil direset silahkan cek diemail anda
 		<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
@@ -162,7 +163,6 @@ if (isset($_POST['reset'])) {
 		</h3>
 		<br>
 	<?php endif ?>
-	</header>
 </section>
 
 <!-- Akhir Header -->
