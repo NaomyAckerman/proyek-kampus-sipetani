@@ -12,11 +12,11 @@ if (!isset($_SESSION['login'])) {
 require '../fungsi.php';
 
 //variabel untuk menampilkan data
-$user = tampil("SELECT * FROM users");
+$user = tampil("SELECT * FROM users order by id_user desc");
 
 // tombol cari ditekan
 if (isset($_POST["cari"])) {
-  $user = cari($_POST['keyword']);
+  $user = cari($_POST);
 }
 
  ?>
@@ -59,7 +59,7 @@ if (isset($_POST["cari"])) {
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Cari..." autocomplete="off" aria-label="Search" aria-describedby="basic-addon2" name="keyword">
         <div class="input-group-append">
-          <button class="btn btn-primary" type="button" name="cari">
+          <button class="btn btn-primary" type="submit" name="cari">
             <i class="fas fa-search"></i>
           </button>
         </div>

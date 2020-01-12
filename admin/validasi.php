@@ -13,6 +13,11 @@ if (!isset($_SESSION['login'])) {
 //variabel untuk menampilkan data
 $validasi = tampil("SELECT * FROM pemesanan where bukti_pembayaran != 0 ORDER BY id_pemesanan DESC");
 
+//tombol carikonfirmasi ditekan
+if (isset($_POST['carikonfirmasi'])) {
+  $validasi = carikonfirmasi($_POST);
+}
+
 // update status pembayaran
 if (isset($_GET['id'])) {
     $idpemesanan = $_GET['id'];
@@ -63,11 +68,11 @@ if (isset($_GET['id'])) {
     </button>
 
     <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <form action="" method="post" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Cari..." aria-label="Search" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" placeholder="Cari..."  autocomplete="off" aria-label="Search" aria-describedby="basic-addon2" name="keywordkonfirmasi">
         <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
+          <button class="btn btn-primary" type="submit" name="carikonfirmasi">
             <i class="fas fa-search"></i>
           </button>
         </div>
@@ -116,10 +121,20 @@ if (isset($_GET['id'])) {
           <i class="fas fa-fw fa-dollar-sign"></i>
           <span>Harga</span></a>
       </li>
+      <!-- cek apakah memiliki pesanan yg status cetaknya 0 dan pembayaran 1 -->
+      <?php 
+      $result = mysqli_query($conn,"SELECT * FROM pemesanan WHERE bukti_pembayaran != 0 AND status_pembayaran = 0");
+      $cekcetak = mysqli_num_rows($result); ?>
       <li class="nav-item">
-        <a class="nav-link" href="validasi.php">
+          <a class="nav-link" href="validasi.php">
           <i class="fas fa-fw fa-check"></i>
-          <span>Konfirmasi</span></a>
+          <span style="position: relative;">Konfirmasi
+            <!--jika cekcetak lebih besar dri 0 maka ada pesanan yang statusnya cetak 0 byr 1-->
+          <?php if ($cekcetak > 0): ?>
+          <span class="badge badge-danger" style="position: absolute; margin: 0px -15px 0px 15; font-size: 12px;"><?= $cekcetak; ?></span>
+       <?php endif ?>
+       </span>
+       </a>
       </li>
     </ul>
 
@@ -147,7 +162,7 @@ if (isset($_GET['id'])) {
                   <tr>
                     <th>NO</th>
                     <th>ID PEMESANAN</th>
-                    <th>NAMA PEMESANAN</th>
+                    <th>NAMA PEMESAN</th>
                     <th>TOTAL PEMBAYARAN</th>
                     <th>BUKTI PEMBAYARAN</th>
                     <th>KONFIRMASI PEMBAYARAN</th>
