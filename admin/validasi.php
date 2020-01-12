@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
   header("location:../homepembeli.php");
 }
 //variabel untuk menampilkan data
-$validasi = tampil("SELECT * FROM pemesanan where bukti_pembayaran = '1'");
+$validasi = tampil("SELECT * FROM pemesanan where bukti_pembayaran != 0 ORDER BY id_pemesanan DESC");
 
 // update status pembayaran
 if (isset($_GET['id'])) {
