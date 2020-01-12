@@ -1,6 +1,4 @@
 <?php 
-//untuk menghubungkan dengan file fungsi
-require '../fungsi.php';
 session_start();
 if (!isset($_SESSION['login'])) {
    echo "<script>
@@ -10,8 +8,17 @@ if (!isset($_SESSION['login'])) {
 }else if ($_SESSION['level'] == 1) {
   header("location:../homepembeli.php");
 }
+
+//untuk menghubungkan dengan file fungsi
+require '../fungsi.php';
+
 //variabel untuk menampilkan data
 $pemesanan = tampil("SELECT * FROM pemesanan order by id_pemesanan desc");
+
+// tombol caripemesanan ditekan
+if (isset($_POST['caripemesanan'])) {
+  $pemesanan = caripemesanan($_POST);
+
 ?>
 
 <!DOCTYPE html>
@@ -49,11 +56,11 @@ $pemesanan = tampil("SELECT * FROM pemesanan order by id_pemesanan desc");
     </button>
 
     <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <form action="" method="post" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Cari..." aria-label="Search" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" placeholder="Cari..." autocomplete="off" aria-label="Search" aria-describedby="basic-addon2" name="keywordpemesanan">
         <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
+          <button class="btn btn-primary" type="submit" name="caripemesanan">
             <i class="fas fa-search"></i>
           </button>
         </div>
@@ -101,10 +108,20 @@ $pemesanan = tampil("SELECT * FROM pemesanan order by id_pemesanan desc");
           <i class="fas fa-fw fa-dollar-sign"></i>
           <span>Harga</span></a>
       </li>
+      <!-- cek apakah memiliki pesanan yg status cetaknya 0 dan pembayaran 1 -->
+      <?php 
+      $result = mysqli_query($conn,"SELECT * FROM pemesanan WHERE bukti_pembayaran != 0 AND status_pembayaran = 0");
+      $cekcetak = mysqli_num_rows($result); ?>
       <li class="nav-item">
-        <a class="nav-link" href="validasi.php">
+          <a class="nav-link" href="validasi.php">
           <i class="fas fa-fw fa-check"></i>
-          <span>Konfirmasi</span></a>
+          <span style="position: relative;">Konfirmasi
+            <!--jika cekcetak lebih besar dri 0 maka ada pesanan yang statusnya cetak 0 byr 1-->
+          <?php if ($cekcetak > 0): ?>
+          <span class="badge badge-danger" style="position: absolute; margin: 0px -15px 0px 15; font-size: 12px;"><?= $cekcetak; ?></span>
+       <?php endif ?>
+       </span>
+       </a>
       </li>
     </ul>
 
@@ -242,4 +259,4 @@ $pemesanan = tampil("SELECT * FROM pemesanan order by id_pemesanan desc");
 
 </body>
 
-</html>
+</htm>

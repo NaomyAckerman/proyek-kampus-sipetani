@@ -288,14 +288,81 @@ function uploadfoto() {
 }
 
 
-//fungsi cari
+//fungsi cari data users
 function cari($keyword) {
 	global $conn;
+	$keyword = $keyword['keyword'];
 	$query = "SELECT * FROM users
-	where
-	nama = '$keyword'
-	";
+				where
+				id_user LIKE '%$keyword%' OR
+				nama LIKE '%$keyword%' OR 
+				jenkel LIKE '%$keyword%' OR
+				email LIKE '%$keyword%' OR
+				id_akses LIKE '%$keyword%'
+			";
 	return tampil($query);
 }
 
- ?>
+//fungsi cari data pemesanan
+function caripemesanan($keywordpemesanan) {
+	global $conn;
+	$keywordpemesanan = $keywordpemesanan['keywordpemesanan'];
+	$query = "SELECT * FROM pemesanan
+				where
+				id_pemesanan LIKE '%$keywordpemesanan%' OR
+				nama_pemesan LIKE '%$keywordpemesanan%' OR 
+				alamat LIKE '%$keywordpemesanan%' OR
+				tanggal_berkunjung LIKE '%$keywordpemesanan%' OR
+				jumlah_tiket LIKE '%$keywordpemesanan%' OR
+				total_pembayaran LIKE '%$keywordpemesanan%' OR
+				no_telp LIKE '%$keywordpemesanan%' OR
+				status_pembayaran LIKE '%$keywordpemesanan%' OR
+				status_cetak LIKE '%$keywordpemesanan%' OR
+				id_user LIKE '%$keywordpemesanan%'
+			";
+	return tampil($query);
+}
+
+//fungsi cari data pengunjung
+function caripengunjung($keywordpengunjung) {
+	global $conn;
+	$keywordpengunjung = $keywordpengunjung['keywordpengunjung'];
+	$query = "SELECT * FROM pengunjung
+				where
+				id_pengunjung LIKE '%$keywordpengunjung%' OR
+				tgl_pengunjung LIKE '%$keywordpengunjung%' OR 
+				jum_pengunjung LIKE '%$keywordpengunjung%'
+			";
+	return tampil($query);
+}
+
+//fungsi cari data harga
+function cariharga($keywordharga) {
+	global $conn;
+	$keywordharga = $keywordharga['keywordharga'];
+	$query = "SELECT * FROM harga
+				where
+				id_harga LIKE '%$keywordharga%' OR
+				hari LIKE '%$keywordharga%' OR 
+				harga LIKE '%$keywordharga%'
+			";
+	return tampil($query);
+}
+
+//fungsi cari data konfirmasi
+function carikonfirmasi($keywordkonfirmasi) {
+	global $conn;
+	$keywordkonfirmasi = $keywordkonfirmasi['keywordkonfirmasi'];
+	$query = "SELECT * FROM pemesanan
+				where
+				bukti_pembayaran != 0 AND
+				id_pemesanan LIKE '%$keywordkonfirmasi%' OR
+				nama_pemesan LIKE '%$keywordkonfirmasi%' OR 
+				total_pembayaran LIKE '%$keywordkonfirmasi%' OR
+				status_pembayaran LIKE '%$keywordkonfirmasi%'
+			";
+	return tampil($query);
+}
+
+
+?>
