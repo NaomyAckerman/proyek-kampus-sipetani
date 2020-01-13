@@ -201,7 +201,7 @@ if(isset($_POST['unggah'])){
 								<?php endforeach; ?>
 	                        </div>	
 							<div class="jumlah form-group p-3 rounded">	
-								<h4 class="text-center">JUMLAH PENGUNJUNG PER HARI</h4>
+								<h4 class="text-center">JUMLAH PENGUNJUNG</h4>
 										
 								<!-- menampilakan seluruh data array dari variable pengunjung dengan pengulangan -->
 								<?php foreach ($pengunjung as $data): ?>
