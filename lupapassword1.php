@@ -47,7 +47,7 @@ if (isset($_POST['reset'])) {
 			$mail->Subject = 'SIPetani-Official Admin';
 			$mail->Body    = '<center><h1>Password Berhasi Direset</h1><br>
 								<h1 style="color : blue;">'.$pasbaru.'</h1><br>
-								<a href="http://localhost/SIPetani/homepembeli.php">
+								<a href="http://localhost/SIPetani/login1.php">
 								<h6>Pesan Tiket SIPetani<h6>
 								</a>
 							  </center>';
