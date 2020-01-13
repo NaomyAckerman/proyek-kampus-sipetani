@@ -27,8 +27,8 @@ if (isset($_POST['reset'])) {
 			$mail->isSMTP();                                      // Set mailer to use SMTP
 			$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;                               // Enable SMTP authentication
-			$mail->Username = 'goldeneagle0319@gmail.com';                 // SMTP username
-			$mail->Password = 'golden0319';                           // SMTP password
+			$mail->Username = 'rmatuszahro@gmail.com';                 // SMTP username
+			$mail->Password = 'RAmatus99';                           // SMTP password
 			$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 			$mail->Port = 465;                                    // TCP port to connect to
 
@@ -36,9 +36,9 @@ if (isset($_POST['reset'])) {
 			$mail->FromName = 'SIPetani-Official';
 			$mail->addAddress($email, 'User');     // Add a recipient
 			// $mail->addAddress('ellen@example.com');               // Name is optional
-			$mail->addReplyTo('goldeneagle0319@gmail.com', 'Admin');
-			$mail->addCC('goldeneagle0319@gmail.com');
-			$mail->addBCC('goldeneagle0319@gmail.com');
+			$mail->addReplyTo('rmatuszahro@gmail.com', 'Admin');
+			$mail->addCC('rmatuszahro@gmail.com');
+			$mail->addBCC('rmatuszahro@gmail.com');
 
 			$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 			$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
