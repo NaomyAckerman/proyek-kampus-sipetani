@@ -21,11 +21,21 @@ function registrasi($data){
  	$email = htmlspecialchars($data["email"]);
  	$password = htmlspecialchars($data["pwd"]);
  	$pin = htmlspecialchars($data["pin"]);
-
+ 	$query = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email'");
+ 	$cekdatauser = mysqli_num_rows($query);
+ 	if ($cekdatauser > 0 ) {
+ 		echo "
+		    <script>
+		      alert('Email Sudah Terdaftar!!!');
+		      document.location.href='registrasipembeli.php';
+		    </script>
+		    ";
+ 	}else{ 		
  	//query insert data
  	$query = "INSERT INTO users values ('','$nama','$jenkel','$email','$password','$pin','1','default.jpg')";
  	mysqli_query($conn,$query);
  	return mysqli_affected_rows($conn);
+ 	}
  }
 
 //fungsi untuk menyimpan data registrasi admin ke dalam database
@@ -36,11 +46,21 @@ function registrasiadmin($data){
  	$email = htmlspecialchars($data["email"]);
  	$password = htmlspecialchars($data["pwd"]);
  	$pin = htmlspecialchars($data["pin"]);
-
+ 	$query = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email'");
+ 	$cekdatauser = mysqli_num_rows($query);
+ 	if ($cekdatauser > 0 ) {
+ 		echo "
+		    <script>
+		      alert('Email Sudah Terdaftar!!!');
+		      document.location.href='registrasipembeli.php';
+		    </script>
+		    ";
+ 	}else{
  	//query insert data
  	$query = "INSERT INTO users values ('','$nama','$jenkel','$email','$password','$pin','2','default.jpg')";
  	mysqli_query($conn,$query);
  	return mysqli_affected_rows($conn);
+ 	}
  }
 
  //fungsi untuk menyimpan data pemesanan admin ke dalam database

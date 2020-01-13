@@ -9,7 +9,7 @@ if (isset($_SESSION['login'])) {
 //code simpan
 if (isset($_POST["submit"])) {
 //cek apakah data berhasil disimpan atau tidak dengan menampilkan pop up
-  if (registrasi($_POST) > 0){
+  if (registrasiadmin($_POST) > 0){
     echo "
     <script>
       alert('Registrasi Berhasil!!!');
