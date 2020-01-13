@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['login'])) {
    echo "<script>
   alert('Akun tidak ada');
-  document.location.href='../login1.php';
+  document.location.href='../registrasiadmin.php';
   </script>";
 }else if ($_SESSION['level'] == 1) {
   header("location:../homepembeli.php");
